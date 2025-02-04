@@ -1,0 +1,57 @@
+﻿<Window x:Class="TestDataGrid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestDataGrid"
+        xmlns:control="http://filterdatagrid.control.com/2021"  
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="#325d79">
+    <Grid>
+
+        <control:FilterDataGrid  
+             x:Name="usersList" 
+             ShowStatusBar="True"
+                 AutoGenerateColumns="False" 
+                 Margin="0,60,0,0"
+             RowBackground="#325d79" 
+             Foreground="White"
+            FontSize="15"
+             FilterPopupBackground="#325d79"
+    
+    
+    
+
+  >
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#325d79"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="Padding" Value="15,10,15,10"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+
+            <control:FilterDataGrid.Columns>
+
+
+                <control:DataGridTextColumn Binding="{Binding Id}" Header="Id" IsColumnFiltered="True" Width="400"/>
+                <control:DataGridTextColumn Binding="{Binding Name}" Header="Name" IsColumnFiltered="True" Width="400"/>
+                <control:DataGridTextColumn Binding="{Binding Value}" Header="Value" IsColumnFiltered="True" Width="400"/>
+                <control:DataGridTextColumn Binding="{Binding Id1}" Header="Id1" IsColumnFiltered="True" Width="400"/>
+                <control:DataGridTextColumn Binding="{Binding Name1}" Header="Name1" IsColumnFiltered="True" Width="400"/>
+                <control:DataGridTextColumn Binding="{Binding Value1}" Header="Value1" IsColumnFiltered="True" Width="400"/>
+                <control:DataGridTextColumn Binding="{Binding Id2}" Header="Id2" IsColumnFiltered="True" Width="400"/>
+                <control:DataGridTextColumn Binding="{Binding Name2}" Header="Name2" IsColumnFiltered="True" Width="400"/>
+                <control:DataGridTextColumn Binding="{Binding Value2}" Header="Value2" IsColumnFiltered="True" Width="400"/>
+
+
+
+
+
+
+            </control:FilterDataGrid.Columns>
+        </control:FilterDataGrid>
+
+    </Grid>
+</Window>
